@@ -1,0 +1,31 @@
+﻿.dashboard { padding: 40px 28px; text-align: left; }
+.dashboard-header { margin-bottom: 28px; }
+.dashboard-header h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.2; margin: 12px 0; }
+.eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.toolbar select, .toolbar button { padding: 10px 16px; border: 1px solid var(--border); border-radius: 10px; font: inherit; color: var(--text-h); background: var(--bg); }
+.toolbar button { background: var(--accent-bg); border-color: var(--accent-border); cursor: pointer; }
+.toolbar :disabled { opacity: .55; cursor: wait; }
+.toolbar :focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.notice { padding: 16px; background: var(--code-bg); border-radius: 12px; margin-bottom: 16px; }
+.error { border: 1px solid var(--accent-border); color: var(--text-h); }
+.source-details { margin-top: 28px; }
+.source-details > summary { padding: 16px 0; }
+.passenger-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.passenger-card { min-width: 0; border: 1px solid var(--border); border-radius: 18px; padding: 24px; background: var(--bg); }
+.card-header { border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.card-header span { font-size: 13px; }
+.card-header h2 { margin: 8px 0 0; overflow-wrap: anywhere; }
+.totals { display: grid; gap: 18px; margin: 24px 0; }
+.total { display: grid; grid-template-columns: 1fr auto; gap: 8px; font-size: 14px; }
+.total dd { color: var(--text-h); font-weight: 700; margin: 0; font-variant-numeric: tabular-nums; }
+summary { cursor: pointer; font-size: 14px; color: var(--text-h); padding: 8px 0; }
+.field-list { margin: 12px 0 0; font-size: 13px; }
+.field-list > div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-top: 1px solid var(--border); }
+.field-list dt, .field-list dd { overflow-wrap: anywhere; min-width: 0; }
+.field-list dd { margin: 0; text-align: right; color: var(--text-h); }
+@media (max-width: 700px) {
+  .dashboard { padding: 28px 16px; }
+  .passenger-grid { grid-template-columns: 1fr; }
+  .passenger-card { padding: 20px; }
+}
