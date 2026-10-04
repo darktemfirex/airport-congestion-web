@@ -18,7 +18,7 @@
 
 .passenger-chart-eyebrow {
   color: var(--accent);
-  font-size: 10px;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 1.8px;
 }
@@ -30,7 +30,7 @@
 }
 
 .passenger-chart-subtitle {
-  font-size: 13px;
+  font-size: 0.8125rem;
   overflow-wrap: anywhere;
 }
 
@@ -44,14 +44,14 @@
 }
 
 .passenger-chart-filters button {
-  min-height: 38px;
+  min-height: 48px;
   padding: 8px 13px;
   border: 0;
   border-radius: 8px;
   background: transparent;
   color: var(--text);
   font: inherit;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -68,32 +68,6 @@
   outline-offset: 3px;
 }
 
-.passenger-chart-totals {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.passenger-chart-total {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 6px;
-  padding: 18px 16px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--code-bg) 55%, var(--bg));
-}
-
-.passenger-chart-series-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
 .passenger-chart-dot {
   display: inline-block;
   width: 9px;
@@ -102,26 +76,13 @@
   border-radius: 3px;
 }
 
-.passenger-chart-total strong {
-  color: var(--text-h);
-  font-size: clamp(20px, 2.3vw, 28px);
-  line-height: 1.5;
-  font-variant-numeric: tabular-nums;
-  overflow-wrap: anywhere;
-}
-
-.passenger-chart-total-caption {
-  font-size: 11px;
-  line-height: 1.6;
-}
-
 .passenger-chart-meta {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 4px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .passenger-chart-scroll {
@@ -144,14 +105,14 @@
   background: var(--bg);
   color: var(--text);
   box-shadow: var(--shadow);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .passenger-chart-tooltip > strong {
   display: block;
   margin: 3px 0 12px;
   color: var(--text-h);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .passenger-chart-tooltip dl {
@@ -187,7 +148,7 @@
   margin: 16px 0 12px;
   padding: 0;
   list-style: none;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .passenger-chart-legend li {
@@ -196,9 +157,16 @@
   gap: 7px;
 }
 
+.passenger-chart-line-key {
+  display: inline-block;
+  width: 24px;
+  border-top-width: 3px;
+  flex-shrink: 0;
+}
+
 .passenger-chart-scroll-hint {
   margin-top: 8px;
-  font-size: 11px;
+  font-size: 0.75rem;
   line-height: 1.7;
   text-align: center;
 }
@@ -210,7 +178,7 @@
   padding: 20px;
   border-radius: 14px;
   background: var(--code-bg);
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
 }
 
@@ -220,11 +188,11 @@
   margin-top: 22px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.8;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .passenger-chart {
     padding: 20px 14px;
     border-radius: 18px;
@@ -238,20 +206,6 @@
     flex: 1;
   }
 
-  .passenger-chart-totals {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-
-  .passenger-chart-total {
-    padding: 13px 10px;
-  }
-
-  .passenger-chart-total strong {
-    font-size: 21px;
-  }
-
-  .passenger-chart-canvas {
-    height: 350px;
-  }
+  .passenger-chart-scroll { overflow-x: hidden; }
+  .passenger-chart-filters button { padding-inline: 6px; }
 }

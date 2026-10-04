@@ -1,0 +1,6 @@
+.notice { padding: 16px; background: var(--code-bg); border-radius: 12px; margin-bottom: 16px; }
+.error { border: 1px solid var(--accent-border); color: var(--text-h); }
+
+@media (max-width: 700px) {
+  .notice { overflow-wrap: anywhere; }
+}
