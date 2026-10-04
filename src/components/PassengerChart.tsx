@@ -7,6 +7,7 @@ import { buildTerminalForecast } from '../utils/terminalForecast'
 import type { TerminalForecastRow } from '../utils/terminalForecast'
 import type { PassengerItem } from '../types/airport'
 import { useMediaQuery } from '../hooks/useMediaQuery'
+import HourAxisTick from './HourAxisTick'
 
 type PassengerChartProps = {
   items: PassengerItem[]
@@ -59,10 +60,9 @@ function PassengerChart({ items, date, selectedTime }: PassengerChartProps) {
               margin={{ top: 24, right: isMobile ? 8 : 16, bottom: 8, left: 0 }}>
               <CartesianGrid vertical={false} stroke="var(--border)" strokeDasharray="4 5" />
               <XAxis type="category" dataKey="hour" axisLine={false} tickLine={false}
-                interval="preserveStartEnd" minTickGap={isMobile ? 16 : 12}
-                tickFormatter={(value: string) => isMobile ? `${value.slice(0, 2)}시` : value}
-                tick={{ fill: 'var(--text)', fontSize: isMobile ? '0.6875rem' : '0.75rem' }}
-                padding={{ left: 4, right: 8 }} height={36} tickMargin={10} />
+                interval={0} ticks={rows.map((row) => row.hour)}
+                tick={<HourAxisTick compact={isMobile} />}
+                padding={{ left: 6, right: 10 }} height={isMobile ? 46 : 36} tickMargin={10} />
               <YAxis type="number" interval="preserveStartEnd" axisLine={false} tickLine={false}
                 allowDecimals={false} width={isMobile ? 42 : 66} tickCount={5}
                 tick={{ fill: 'var(--text)', fontSize: isMobile ? '0.6875rem' : '0.75rem' }}

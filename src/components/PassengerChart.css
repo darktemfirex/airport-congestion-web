@@ -96,6 +96,16 @@
   height: clamp(280px, 45vw, 420px);
 }
 
+.hour-axis-tick {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.hour-axis-tick-compact {
+  font-size: clamp(9px, 2.5vw, 11px);
+}
+
 .passenger-chart-tooltip {
   min-width: 175px;
   padding: 14px 16px;
