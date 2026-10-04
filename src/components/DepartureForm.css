@@ -3,7 +3,6 @@
 .departure-field { display: flex; min-width: 0; flex-direction: column; gap: 8px; }
 .departure-field label, .departure-help { font-size: 0.8125rem; }
 .departure-help { margin-bottom: 16px; }
-.toolbar .reset-time { background: var(--bg); border-color: var(--border); }
 .toolbar button { background: var(--accent-bg); border-color: var(--accent-border); cursor: pointer; }
 .toolbar :disabled { opacity: .55; cursor: wait; }
 .toolbar :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

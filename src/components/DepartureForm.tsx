@@ -16,12 +16,6 @@ export default function DepartureForm({ loading, onSearch }: DepartureFormProps)
   const timeId = `${id}-time`
   const helpId = `${id}-help`
 
-  function returnToCurrentTime() {
-    const current = getKoreaDateTime()
-    setDeparture(current)
-    void onSearch(current)
-  }
-
   return (
     <>
       <form className="toolbar" onSubmit={(event) => {
@@ -40,9 +34,6 @@ export default function DepartureForm({ loading, onSearch }: DepartureFormProps)
             onChange={(event) => setDeparture({ ...departure, time: event.target.value })} />
         </div>
         <button type="submit" disabled={loading}>{loading ? '조회 중...' : '24시간 혼잡도 보기'}</button>
-        <button className="reset-time" type="button" disabled={loading} onClick={returnToCurrentTime}>
-          현재 시간으로 돌아가기
-        </button>
       </form>
       <p className="departure-help" id={helpId}>한국 시간(KST) 기준 · 오늘과 내일 조회 가능 · 선택한 날짜의 24시간 추이와 출발 시간 위치를 표시합니다.</p>
     </>

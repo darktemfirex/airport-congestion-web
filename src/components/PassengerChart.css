@@ -62,8 +62,7 @@
   box-shadow: 0 1px 4px color-mix(in srgb, var(--text-h) 10%, transparent);
 }
 
-.passenger-chart button:focus-visible,
-.passenger-chart-scroll:focus-visible {
+.passenger-chart button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -85,16 +84,16 @@
   font-size: 0.75rem;
 }
 
-.passenger-chart-scroll {
+.passenger-chart-viewport {
+  width: 100%;
+  min-width: 0;
   max-width: 100%;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-color: var(--border) transparent;
-  scrollbar-width: thin;
 }
 
 .passenger-chart-canvas {
-  height: 390px;
+  width: 100%;
+  min-width: 0;
+  height: clamp(280px, 45vw, 420px);
 }
 
 .passenger-chart-tooltip {
@@ -164,7 +163,7 @@
   flex-shrink: 0;
 }
 
-.passenger-chart-scroll-hint {
+.passenger-chart-hint {
   margin-top: 8px;
   font-size: 0.75rem;
   line-height: 1.7;
@@ -194,7 +193,7 @@
 
 @media (max-width: 700px) {
   .passenger-chart {
-    padding: 20px 14px;
+    padding: 20px 10px;
     border-radius: 18px;
   }
 
@@ -206,6 +205,5 @@
     flex: 1;
   }
 
-  .passenger-chart-scroll { overflow-x: hidden; }
   .passenger-chart-filters button { padding-inline: 6px; }
 }

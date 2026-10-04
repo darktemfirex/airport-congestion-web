@@ -17,7 +17,7 @@ export default function DashboardHeader({ theme, onToggleTheme }: DashboardHeade
           {actionLabel}
         </button>
       </div>
-      <h1>인천공항 승객 예고</h1>
+      <h1>인천공항 승객 예측</h1>
       <p>하루 24시간의 터미널별 예상 승객 추이를 확인하세요.</p>
     </header>
   )
